@@ -1,0 +1,73 @@
+.temp-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card-container {
+    width: 300px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    background: transparent;
+    border: 2px solid rgba(244, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #f6beed;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-top: 60px;
+}
+
+.title-city {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Segoe UI";
+}
+
+.temp-ltr {
+    font-size: 40px;
+    margin-top: 10px;
+    font: oblique bold  cursive;
+}
+
+.temp-ltr2{
+    font-size: 20px;
+    font-family: "Segoe UI";
+}
+
+
+article {
+    position: relative;
+    width: 500px;
+    transition: all .3s ease;
+}
+
+
+
+article:hover {
+    transform: perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0)
+}
+
+article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before {
+    opacity: 1;   
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+}
